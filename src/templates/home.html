@@ -11,24 +11,27 @@
     <br><input type="text" name="url">
     <br><input type="submit" name="submit">
 </form>
-    <table align="center" border="2">
-        <tr>
-            <th>long</th>
-            <th>short</th>
+<table align="center" border="2">
+    <tr>
+        <th>long</th>
+        <th>short</th>
+        <th>date of creating</th>
+        <th>counter</th>
 
 
-        </tr>
-        {% for url in  urls %}
-            <tr>
+    </tr>
+    {% for url in urls %}
+    <tr>
 
-                <td><a href="{{ url.long_url }}">{{ url.long_url }}</a></td>
-                <td><a href="{{ url.short_url }}">{{ url.short_url }}</a></td>
-                <td>{{url.time}}</td>
+        <td><a href="{{ url.long_url }}">{{ url.long_url }}</a></td>
+        <td><a href="{{ url.short_url }}">{{ url.short_url }}</a></td>
+        <td>{{url.time}}</td>
+        <td>{{url.count}}</td>
 
 
-            </tr>
-        {% endfor %}
-    </table>
+    </tr>
+    {% endfor %}
+</table>
 
 </body>
 </html>
